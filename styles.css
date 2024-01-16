@@ -21,6 +21,7 @@ html, body {
     border-style: solid;
     border-color: gray;
     border-width: 2px;
+    box-sizing: border-box;
 }
 
 .PixelPad_canvas{
@@ -38,7 +39,16 @@ html, body {
 
 .PixelPad_canvasCell{
     flex: 1;
-    border-color: gray;
     border-width: 2px;
-    border-style: solid;
+    border-color: gray;
+    border-bottom-style: solid;
+    border-right-style: solid;
+}
+
+.PixelPad_canvasCell.border-top{
+    border-top-style: solid;
+}
+
+.PixelPad_canvasCell.border-left{
+    border-left-style: solid;
 }
