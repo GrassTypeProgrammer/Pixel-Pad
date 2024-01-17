@@ -6,14 +6,15 @@
     <title>Pixel Pad</title>
     <Script src="functions.js"></Script>
     <script>
-        addEventListener("DOMContentLoaded", (event) => {setupCanvas()});
+        addEventListener("DOMContentLoaded", (event) => {initialise()});
     </script>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
     <div class="PixelPad_root">
         <div class="PixelPad_sideBar">
-            
+            <div class="PixelPad_componentBar" id="colorBar"></div>
+            <div class="PixelPad_componentBar" id="toolBar"></div>
         </div>
         <div class="PixelPad_canvas" id="canvas">
 

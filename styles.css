@@ -12,16 +12,36 @@ html, body {
     height: 500px;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 20px;
 }
 
 .PixelPad_sideBar{
-    width: 40px;
+    width: 30px;
     height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.PixelPad_componentBar{
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.PixelPad_colorBox{
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
     border-style: solid;
     border-color: gray;
-    border-width: 2px;
-    box-sizing: border-box;
+    border-width: 2px; 
+}
+
+.PixelPad_colorBox.selected{
+    border-color: black;
+    border-width: 3px; 
 }
 
 .PixelPad_canvas{

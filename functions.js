@@ -1,7 +1,16 @@
 _height = 20;
 _width = 20;
+_currentColor = 'blue';
 
-function setupCanvas(){
+
+function initialise(){
+    initialiseCanvas();
+    createColorBox('red', true);
+    createColorBox('blue');
+    createColorBox('green');
+}
+
+function initialiseCanvas(){
     const canvas = document.getElementById('canvas');
     
     // TODO: Luke see why this isn't working. It is needed for resizing the grid
@@ -35,11 +44,40 @@ function setupCanvas(){
 
 
 function onClickCanvasCell(e){
-    e.target.style.background = 'blue';
+    e.target.style.background = _currentColor;
 }
 
 function onRightClickCanvasCell(e){
     e.preventDefault();
     e.target.style.background = 'none';
     return false;
+}
+
+function createColorBox(color, selected = false){
+    const colorBar = document.getElementById('colorBar');
+    const colorBox = document.createElement('button');
+    colorBox.addEventListener('click', function(e) {changeCurrentColor(e, color)});
+    colorBox.classList.add('PixelPad_colorBox');
+
+    if(selected){
+        colorBox.classList.add('selected');
+        _currentColor = 'red';
+    }
+    
+    colorBox.style.background = color;
+    colorBar.appendChild(colorBox);
+}
+
+function changeCurrentColor(e, color){
+    _currentColor = color;
+    unselectColorBoxes();
+    e.target.classList.add('selected');
+}
+
+function unselectColorBoxes(){
+    const boxes = document.getElementsByClassName('PixelPad_colorBox');
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.remove('selected');
+        
+    }
 }
