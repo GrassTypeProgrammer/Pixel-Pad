@@ -7,9 +7,14 @@ _minWidth = 1;
 _cellSize = 25;
 _currentColor = 'blue';
 
+_leftMouseDown = false;
+_rightMouseDown = false;
+
 
 //#region initialise
 function initialise(){
+    document.addEventListener('mousedown', setMouseState);
+    document.addEventListener('mouseup', setMouseState);
     initialiseCanvas();
     initialiseColorBar();
     initialiseGridChanger();
@@ -32,6 +37,7 @@ function initialiseCanvas(){
         for (let x = 0; x < _width; x++) {
             const cell = document.createElement('div');
             cell.addEventListener('click', onClickCanvasCell);
+            cell.addEventListener('mouseenter', onMouseEnterCanvasCell)
             cell.addEventListener('contextmenu', onRightClickCanvasCell, false);
             cell.classList.add('PixelPad_canvasCell');
 
@@ -103,7 +109,7 @@ function changeCanvasSize(){
         _height = _minHeight;
         document.getElementById('inputY').value = _minHeight;
     }
-    
+
     initialiseCanvas();
 }
 
@@ -143,6 +149,15 @@ function unselectColorBoxes(){
 
 
 
+//#region Canvas Interaction
+function onMouseEnterCanvasCell(e){
+    if(_leftMouseDown){
+        e.target.style.background = _currentColor;
+    }
+    else if(_rightMouseDown){
+        e.target.style.background = 'none';
+    }
+}
 
 function onClickCanvasCell(e){
     e.target.style.background = _currentColor;
@@ -153,3 +168,13 @@ function onRightClickCanvasCell(e){
     e.target.style.background = 'none';
     return false;
 }
+
+function setMouseState(e){
+        if(e.button == 0){
+            _leftMouseDown = (e.type == 'mousedown');
+        }
+        else if(e.button == 2){
+            _rightMouseDown = (e.type == 'mousedown');
+        }
+}
+//#endregion

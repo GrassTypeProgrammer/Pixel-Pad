@@ -1,7 +1,7 @@
 TODO: 
     1) Done -  Allow for a choice of colors on the side bar. These should be fixed colours for now.
     2) Done - Allow a change in grid size.
-    3) Drag to colour and erase.
+    3) Done - Drag to colour and erase.
     4) Add a clear all button.
     5) Toggle grid lines
     6) title at top of screen. Play with the size/layout. Mybe have side bar further left and canvas be bigger? 
@@ -11,3 +11,6 @@ TODO:
     Stretch goals:
     7) Allow colour selection with colour wheel?
      
+
+Bugs: 
+    - left click and hold, then move tries to drag which stops the drag to color working properly.
