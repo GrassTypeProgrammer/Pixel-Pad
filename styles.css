@@ -8,10 +8,8 @@ html, body {
 }
 
 .PixelPad_root{
-    width: 550px;
-    height: 500px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -44,6 +42,16 @@ html, body {
     border-width: 3px; 
 }
 
+.PixelPad_toolBox{
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px; 
+}
+
+
 .PixelPad_canvas{
     width: 500px;
     height: 500px;
@@ -72,3 +80,14 @@ html, body {
 .PixelPad_canvasCell.border-left{
     border-left-style: solid;
 }
+
+.PixelPad_row{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.PixelPad_row.bottom{
+    margin-left: 50px;
+}
+

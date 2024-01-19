@@ -1,11 +1,6 @@
 TODO: 
-    1) Allow for a choice of colors on the side bar. These should be fixed colours for now.
-    2) Allow a change in grid size.
-        - Use a button on the side bar that makes a popup.
-        - Warn user the current work will be lost.
-        - Add limits so it can't get too big/small.
-        - Include a slide bar and input field.
-        - Allow asymetrical grids.
+    1) Done -  Allow for a choice of colors on the side bar. These should be fixed colours for now.
+    2) Done - Allow a change in grid size.
     3) Drag to colour and erase.
     4) Add a clear all button.
     5) Toggle grid lines
