@@ -18,6 +18,7 @@ function initialise(){
     initialiseCanvas();
     initialiseColorBar();
     initialiseGridChanger();
+    initialiseClearAllButton();
 }
 
 function initialiseCanvas(){
@@ -178,3 +179,14 @@ function setMouseState(e){
         }
 }
 //#endregion
+
+
+function initialiseClearAllButton(){
+    const row = document.getElementById('row1');
+    const button = document.createElement('button');
+    button.classList.add('PixelPad_button');
+    button.innerText = 'Clear All';
+    button.addEventListener('click', initialiseCanvas);
+
+    row.appendChild(button);
+}

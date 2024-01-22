@@ -2,7 +2,7 @@ TODO:
     1) Done -  Allow for a choice of colors on the side bar. These should be fixed colours for now.
     2) Done - Allow a change in grid size.
     3) Done - Drag to colour and erase.
-    4) Add a clear all button.
+    4) Done - Add a clear all button.
     5) Toggle grid lines
     6) title at top of screen. Play with the size/layout. Mybe have side bar further left and canvas be bigger? 
         - Maybe add a background/border to the canvas.

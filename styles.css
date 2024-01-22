@@ -97,3 +97,6 @@ html, body {
     margin-left: 50px;
 }
 
+.PixelPad_input{
+    max-width: 70px
+}
