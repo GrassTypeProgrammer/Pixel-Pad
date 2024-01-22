@@ -13,6 +13,12 @@ html, body {
     gap: 20px;
 }
 
+.PixelPad_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .PixelPad_sideBar{
     width: 30px;
     height: 500px;
